@@ -1,0 +1,161 @@
+h2 {
+    text-align:center;
+    font-size:16px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight:medium;
+    letter-spacing:2px;
+
+}
+
+h3 {
+    text-align:center;
+    font-size:12px;
+    font-family: "Noto Sans JP", sans-serif;
+    letter-spacing:2px;
+    font-weight:medium;
+    margin:3% 0;
+}
+
+p {
+    text-align:center;
+    font-size:13px;
+    padding-top:5%;
+    padding-bottom:5%;
+    font-family: "Noto Serif JP", serif;
+
+
+}
+
+p.des-caution {
+    text-align:left;
+    margin:0 7%;
+    letter-spacing:1.7px;
+}
+
+ul {
+    list-style:none;
+    display:flex;
+    gap:5%;
+    justify-content:center;
+}
+
+table {
+    border-top:1px solid #000;
+    border-collapse:collapse;
+    width: 100%;
+    margin: 5px auto;
+    font-family: "Noto Serif JP", serif;
+   
+
+}
+
+caption {
+    caption-side:bottom;
+    font-size:11px;
+    font-family: "Noto Serif JP", serif;
+    margin:3% auto;
+    color:rgb(50, 40, 40);
+}
+
+
+tbody {
+    letter-spacing:1.0px;
+    line-height:3.0em;
+}
+
+
+tr {
+    border-bottom:1px solid #000;
+
+}
+
+th.title1,th.title2,th.title3 {
+    line-height:2.0em;
+    font-size:12px;
+    font-family: "Noto Serif JP", serif;
+    text-align:center;
+    padding-left:0%;
+    font-weight:thin;
+    
+}
+
+th,td {
+    padding:5px 3px;
+    text-align:left;
+    font-size:13px;
+    font-family: "Noto Serif JP", serif;
+
+}
+
+th.area {
+    padding-left:5%;
+    background-color: rgba(238, 238, 238, 0.392);
+}
+
+td {
+    padding-left:3%;
+}
+
+td.price {
+    text-align:center;
+    padding-left:0%;
+    
+}
+
+td.button {
+    padding-left:0%;
+    text-align:center;
+    background-color: #fff;
+    text-decoration:underline;
+    text-decoration-color: #000;
+    transition-property:all;
+    transition-duration: 1.0s;
+    border-left:0,5px solid #000;
+    border-radius:1px;
+    cursor:pointer;
+    font-size:11px;
+}
+
+
+td.button:hover,:focus {
+    background-color: rgba(255, 162, 162, 0.295);
+}
+
+a {
+    text-decoration-line:none;
+    text-decoration-color: #000;
+    color:#000;
+
+}
+
+a:hover {
+    text-decoration-color:rgba(255, 162, 162, 0.295);
+    transform:underline scaleX(0);
+    transform-origin:left;
+
+}
+
+.slide-underline {
+    position: relative;
+    display: inline-block;
+    color: #333;
+    text-decoration: none;
+  }
+
+  .slide-underline::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    background-color: rgb(249, 146, 146); 
+    transform: scaleX(1);
+    transform-origin: right;
+    transition: transform 0.4s ease;
+  }
+
+  .slide-underline:hover::after {
+    transform: scaleX(0);
+  }
+

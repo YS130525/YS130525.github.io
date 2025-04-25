@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="iframe.css">
+</head>
+<body>
+
+    <button id="openModal">予約する</button>
+
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <iframe src="iframe-content.html" frameborder="0" title="Description of iframe content"></iframe>
+        </div>
+    </div>
+    <script>
+        // Check if the stylesheet is loaded
+        const link = document.querySelector('link[href="iframe.css"]');
+        link.onerror = () => console.error('Error: iframe.css failed to load.');
+    </script>
+    <script src="test-site.js" defer></script>
+</body>
+</html>

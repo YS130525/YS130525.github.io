@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>商品ポップアップ表示例</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="button" id="openModal">
+    <h3 onclick="openModal('iframe-content.html')">予約する</h3>
+
+    <h3 onclick="openModal('iframe-content02.html')">予約する</h3>
+
+    <h3>予約する</h3>
+
+    <h3>予約する</h3>
+  </div>
+
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <iframe id=modal-iframe src="" frameborder="0"></iframe>
+    </div>
+
+  <!DOCTYPE html>
+  <html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>モーダル複数表示</title>
+    <style>
+      .modal-overlay {
+        position: fixed;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        display: none;
+        align-items: center;
+        justify-content: center;
+        z-index: 999;
+      }
+  
+      .modal-content {
+        background: #fff;
+        width: 90%;
+        max-width: 800px;
+        height: 80%;
+        position: relative;
+        border-radius: 8px;
+        overflow: hidden;
+      }
+  
+      .modal-content iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+      }
+  
+      .close-btn {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        font-size: 20px;
+        background: none;
+        border: none;
+        cursor: pointer;
+      }
+  
+      .button-group {
+        margin: 2rem;
+      }
+  
+      .button-group button {
+        margin: 0.5rem;
+        padding: 0.7rem 1.5rem;
+        font-size: 1rem;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+  
+    <div class="button-group">
+      <button onclick="openModal('subpage1.html')">ページ1を開く</button>
+      <button onclick="openModal('subpage2.html')">ページ2を開く</button>
+      <button onclick="openModal('subpage3.html')">ページ3を開く</button>
+    </div>
+  
+    <div id="modal" class="modal-overlay">
+      <div class="modal-content">
+        <button class="close-btn" onclick="closeModal()">×</button>
+        <iframe id="modal-iframe" src=""></iframe>
+      </div>
+    </div>
+  
+    <script>
+      function openModal(url) {
+        document.getElementById('modal-iframe').src = url;
+        document.getElementById('modal').style.display = 'flex';
+      }
+  
+      function closeModal() {
+        document.getElementById('modal').style.display = 'none';
+        document.getElementById('modal-iframe').src = '';
+      }
+    </script>
+  
+  </body>
+  </html>
+  
+
+  <script src="script.js"></script>
+</body>
+</html>
